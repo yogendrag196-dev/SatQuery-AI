@@ -1,0 +1,109 @@
+{
+  "scenario_id": "brahmaputra-flood",
+  "name": "Brahmaputra River Basin Monsoon Flood Inundation",
+  "sensor": "Sentinel-1 SAR / Sentinel-2 MSI Optical",
+  "pass_date_baseline": "2026-05-15T04:22:10Z",
+  "pass_date_post_event": "2026-08-12T04:30:45Z",
+  "gsd_resolution": "10.0m Multispectral",
+  "bounds": {
+    "north": 26.7500,
+    "south": 26.5500,
+    "east": 93.5000,
+    "west": 93.2000
+  },
+  "fixtures": {
+    "detect": {
+      "status": "SUCCESS",
+      "count": 0,
+      "model_version": "YOLOv8-RemoteSensing-StageReliable",
+      "bboxes": []
+    },
+    "segment": {
+      "status": "SUCCESS",
+      "feature_type": "water_inundation",
+      "index_type": "NDWI",
+      "area_km2": 142.8,
+      "area_hectares": 14280.0,
+      "polygon_count": 2,
+      "threshold_used": 0.1,
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Brahmaputra Main Channel & Inundation Sector A",
+              "feature_type": "water",
+              "color": "#00D9FF",
+              "fillColor": "#00D9FF",
+              "fillOpacity": 0.45,
+              "ndwi_mean": 0.62,
+              "area_km2": 85.68
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [[93.25, 26.68], [93.45, 26.69], [93.42, 26.61], [93.28, 26.60], [93.25, 26.68]]
+              ]
+            }
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Kaziranga Buffer Zone Inundation Sector B",
+              "feature_type": "water",
+              "color": "#0088FF",
+              "fillColor": "#0088FF",
+              "fillOpacity": 0.50,
+              "ndwi_mean": 0.58,
+              "area_km2": 57.12
+            },
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [[93.30, 26.64], [93.48, 26.65], [93.44, 26.58], [93.29, 26.57], [93.30, 26.64]]
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "change_detect": {
+      "status": "SUCCESS",
+      "change_percentage": 248.5,
+      "change_type_guess": "flood_expansion",
+      "area_km2": 142.8,
+      "aligned": true,
+      "change_polygons": [
+        {
+          "type": "Feature",
+          "properties": { "name": "Flood Inundation Delta (+248.5%)", "color": "#00D9FF", "fillColor": "#00D9FF", "fillOpacity": 0.45 },
+          "geometry": { "type": "Polygon", "coordinates": [[[93.25, 26.68], [93.45, 26.69], [93.42, 26.61], [93.28, 26.60], [93.25, 26.68]]] }
+        }
+      ],
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": { "name": "Flood Inundation Delta (+248.5%)", "color": "#00D9FF", "fillColor": "#00D9FF", "fillOpacity": 0.45 },
+            "geometry": { "type": "Polygon", "coordinates": [[[93.25, 26.68], [93.45, 26.69], [93.42, 26.61], [93.28, 26.60], [93.25, 26.68]]] }
+          }
+        ]
+      }
+    },
+    "vlm_describe": {
+      "status": "SUCCESS",
+      "description": "**LAND USE & INUNDATION ASSESSMENT: BRAHMAPUTRA RIVER BASIN**\n\nThe imagery reveals extensive monsoon river swelling across a fertile alluvial floodplain and wildlife buffer corridor. Active flood channels have submerged surrounding agricultural tea estates and isolated rural settlements.\n\n**Visible Infrastructure:**\n- Embankment road corridors with 4 visible breach points causing localized road cuts.\n- Submerged residential hamlets with standing floodwater depths estimated above nominal threshold.\n\n**Uncertainties & Limitations:**\n- Cloud shadows across the northern ridgeline obscure vegetative soil saturation levels.\n- Sub-surface silt deposition volume requires SAR polarimetric validation.",
+      "land_use": ["alluvial_floodplain", "river_basin", "agricultural_tea_estates"],
+      "visible_infrastructure": ["embankment_roads", "bridges", "elevated_shelters"],
+      "notable_features": ["Swollen main river channel", "Submerged agricultural sectors", "4 embankment breach points"],
+      "uncertainties": [
+        "Cloud shadows obscure vegetative saturation levels",
+        "Silt thickness requires radar validation"
+      ],
+      "confidence_score": 0.968,
+      "model": "gemini-2.5-flash"
+    }
+  }
+}

@@ -1,0 +1,1941 @@
+[
+  {
+    "timestamp": "2026-09-04T09:41:07.927543Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 391.96
+  },
+  {
+    "timestamp": "2026-09-04T09:41:07.959635Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 383.67
+  },
+  {
+    "timestamp": "2026-09-04T09:41:07.992490Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 427.79
+  },
+  {
+    "timestamp": "2026-09-04T09:41:19.393182Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 358.07
+  },
+  {
+    "timestamp": "2026-09-04T09:41:19.420065Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 343.06
+  },
+  {
+    "timestamp": "2026-09-04T09:41:19.434753Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 363.01
+  },
+  {
+    "timestamp": "2026-09-04T09:41:37.095870Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 419.52
+  },
+  {
+    "timestamp": "2026-09-04T09:41:37.107634Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 413.07
+  },
+  {
+    "timestamp": "2026-09-04T09:43:51.488523Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all cargo and naval ships in this harbor and identify military vessels. (Mission: mumbai-port)",
+    "response": "Identified and located **12 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 98.2% avg confidence]`.\n\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 12,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 10,
+        "aircraft": 0,
+        "structures": 2,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 0.0
+  },
+  {
+    "timestamp": "2026-09-04T09:43:51.533131Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this scene in detail: identify terrain features, infrastructure, and water extent. (Mission: mumbai-port)",
+    "response": "Identified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\nSpectral analysis delineates **42.5 km\u00b2 (4250.0 hectares)** of water `[Spectral Remote-Sensing Segmenter (NDWI/NDVI) | 96.8% confidence]`.\n\n- **Index Formulations**: Computed normalized multi-band band reflectance ratios for calibrated boundary extraction.\n- **Contour Vectorization**: Delineated contiguous polygon boundaries with morphological edge smoothing.\n- **Areal Extent**: Calibrated against geospatial raster coordinate reference grid.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (gemini-2.5-flash) | 98.2% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene captures a high-density deepwater maritime port and naval defense basin along the western seaboard. Land use comprises active container terminals, bulk handling wharves, and secure naval facilities.\n\n**Visible Infrastructure:**\n- 4 rail-mounted heavy container gantry crane wharves.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Sun-glint along the southern wharf limits fine deck cargo verification.\n- 0.28m resolution threshold limits sub-classification of inner-basin auxiliary harbor craft.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 1
+      }
+    },
+    "latency_ms": 3.97
+  },
+  {
+    "timestamp": "2026-09-04T09:43:52.220878Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: What changed between these two dates, and where did the change occur? (History: 0 turns)",
+    "response": "Bi-temporal differencing reveals a **+24.6% structural variance** across 32.4 km\u00b2 of the scene: new infrastructure construction is concentrated in the northern logistics corridor, while surface drainage patterns exhibit seasonal alteration.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 654.41
+  },
+  {
+    "timestamp": "2026-09-04T09:43:52.246605Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: What changed between these two dates, and where did the change occur? (Mission: mumbai-port)",
+    "response": "Bi-temporal differencing reveals a **+24.6% structural variance** across 32.4 km\u00b2 of the scene: new infrastructure construction is concentrated in the northern logistics corridor, while surface drainage patterns exhibit seasonal alteration. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`\n\nBi-temporal co-registration indicates a **+12.4% change** (berth occupancy shift) relative to the baseline pass `[Bi-Temporal Differencing Engine (SSIM/CVA) | 97.5% confidence]`.\n\n- **Variance Extent**: Identified localized structural anomalies across **42.5 km\u00b2** of the scene footprint.\n- **Alignment Accuracy**: Sub-pixel geometric tie-point alignment verified against WGS84 raster metadata.\n- **Inspection Mode**: Swipe / Split Compare layer activated on tactical map for direct visual comparison.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 16,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 681.4
+  },
+  {
+    "timestamp": "2026-09-04T09:43:52.280010Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Has the built-up area increased, decreased, or remained unchanged? (Mission: mumbai-port)",
+    "response": "Bi-temporal co-registration indicates a **+12.4% change** (berth occupancy shift) relative to the baseline pass `[Bi-Temporal Differencing Engine (SSIM/CVA) | 97.5% confidence]`.\n\n- **Variance Extent**: Identified localized structural anomalies across **42.5 km\u00b2** of the scene footprint.\n- **Alignment Accuracy**: Sub-pixel geometric tie-point alignment verified against WGS84 raster metadata.\n- **Inspection Mode**: Swipe / Split Compare layer activated on tactical map for direct visual comparison.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 16,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 2.36
+  },
+  {
+    "timestamp": "2026-09-04T09:43:52.325368Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Analyze deforestation or burn scar extent in km\u00b2 across this scene. (Mission: mumbai-port)",
+    "response": "Spectral analysis delineates **42.5 km\u00b2 (4250.0 hectares)** of water `[Spectral Remote-Sensing Segmenter (NDWI/NDVI) | 96.8% confidence]`.\n\n- **Index Formulations**: Computed normalized multi-band band reflectance ratios for calibrated boundary extraction.\n- **Contour Vectorization**: Delineated contiguous polygon boundaries with morphological edge smoothing.\n- **Areal Extent**: Calibrated against geospatial raster coordinate reference grid.\n\nBi-temporal co-registration indicates a **+12.4% change** (berth occupancy shift) relative to the baseline pass `[Bi-Temporal Differencing Engine (SSIM/CVA) | 97.5% confidence]`.\n\n- **Variance Extent**: Identified localized structural anomalies across **42.5 km\u00b2** of the scene footprint.\n- **Alignment Accuracy**: Sub-pixel geometric tie-point alignment verified against WGS84 raster metadata.\n- **Inspection Mode**: Swipe / Split Compare layer activated on tactical map for direct visual comparison.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 1
+      }
+    },
+    "latency_ms": 0.0
+  },
+  {
+    "timestamp": "2026-09-04T09:43:52.901246Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: Identify built-up infrastructure and water-covered regions using both optical and SAR images. (History: 0 turns)",
+    "response": "Multispectral band analysis shows distinctive spectral reflectance signatures: water bodies exhibit high Near-Infrared (NIR) absorption (appearing dark blue/black), dense vegetation exhibits high NIR reflectance (appearing vibrant green/red in false color), and metallic roofs produce high shortwave reflectance.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 542.92
+  },
+  {
+    "timestamp": "2026-09-04T09:43:52.922647Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Identify built-up infrastructure and water-covered regions using both optical and SAR images. (Mission: mumbai-port)",
+    "response": "Multispectral band analysis shows distinctive spectral reflectance signatures: water bodies exhibit high Near-Infrared (NIR) absorption (appearing dark blue/black), dense vegetation exhibits high NIR reflectance (appearing vibrant green/red in false color), and metallic roofs produce high shortwave reflectance. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`\n\nJoint optical-SAR fusion analyzed Mumbai Harbor: Cartosat-3 0.28m optical pass resolved ship superstructures and mast geometry (62.5% contribution), while RISAT-2BR1 X-band SAR metallic dielectric backscatter (37.5% contribution) verified 14 discrete naval and commercial hulls across harbor water bodies, suppressing sea-surface sun glint. `[Cross-Modal Optical-SAR Fusion Engine (RISAT-2BR1 + Cartosat-3) | 98.5% confidence | Modality Breakdown: Optical 62.5%, SAR 37.5%]`.\n\n- **Optical Contribution (62.5%)**: High-resolution spatial boundaries, building perimeters, and surface spectral features.\n- **SAR Contribution (37.5%)**: Active microwave backscatter, metallic corner reflections, and all-weather water delineation.\n- **Joint Extraction**: Combined dual-modality tensor resolves shadow ambiguities and cloud attenuation across the scene.\n\nIdentified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 67.1,
+      "area_hectares": 6710.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 2
+      }
+    },
+    "latency_ms": 565.43
+  },
+  {
+    "timestamp": "2026-09-04T09:43:53.702318Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: Is there any aircraft or runway visible here? (History: 0 turns)",
+    "response": "Air asset surveillance confirms **0 fixed-wing aircraft** within the current AOI footprint. The scene consists of maritime and coastal logistics facilities; 2 helipad landing decks on naval vessels in Sector Bravo are identified in standby readiness.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 739.02
+  },
+  {
+    "timestamp": "2026-09-04T09:43:53.730577Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Is there any aircraft or runway visible here? (Mission: mumbai-port)",
+    "response": "Air asset surveillance confirms **0 fixed-wing aircraft** within the current AOI footprint. The scene consists of maritime and coastal logistics facilities; 2 helipad landing decks on naval vessels in Sector Bravo are identified in standby readiness. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 16,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 768.83
+  },
+  {
+    "timestamp": "2026-09-04T09:43:54.108283Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: What is the weather and cloud cover like? (History: 0 turns)",
+    "response": "Meteorological pass telemetry reports **4.2% cloud cover** over the primary AOI with nominal atmospheric optical transmittance. Minor specular sun-glint is detected along the outer harbor anchorage, with zero fog attenuation.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 347.85
+  },
+  {
+    "timestamp": "2026-09-04T09:43:54.133466Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: What is the weather and cloud cover like? (Mission: mumbai-port)",
+    "response": "Meteorological pass telemetry reports **4.2% cloud cover** over the primary AOI with nominal atmospheric optical transmittance. Minor specular sun-glint is detected along the outer harbor anchorage, with zero fog attenuation. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 16,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 376.15
+  },
+  {
+    "timestamp": "2026-09-04T09:44:44.700380Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 486.84
+  },
+  {
+    "timestamp": "2026-09-04T09:44:44.724924Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 517.87
+  },
+  {
+    "timestamp": "2026-09-04T09:44:49.617303Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 383.18
+  },
+  {
+    "timestamp": "2026-09-04T09:44:49.651532Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 422.41
+  },
+  {
+    "timestamp": "2026-09-04T09:47:23.107181Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 620.32
+  },
+  {
+    "timestamp": "2026-09-04T09:47:23.137688Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 660.88
+  },
+  {
+    "timestamp": "2026-09-04T09:49:27.412004Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 705.06
+  },
+  {
+    "timestamp": "2026-09-04T09:49:27.451941Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 749.37
+  },
+  {
+    "timestamp": "2026-09-06T13:28:34.839105Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all ships in this harbor area (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 13288.67
+  },
+  {
+    "timestamp": "2026-09-06T13:51:43.640130Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all ships in this harbor area (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 80.77
+  },
+  {
+    "timestamp": "2026-09-06T13:51:59.185616Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: What are the fuel storage facilities here? (History: 0 turns)",
+    "response": "The Northern Wharf sector contains **4 bulk petroleum storage tanks** (each 50m diameter) and a coastal marine bunkering terminal with secondary containment berms to support cargo and naval vessel fueling.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 1202.24
+  },
+  {
+    "timestamp": "2026-09-06T13:51:59.294809Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: What are the fuel storage facilities here? (Mission: mumbai-port)",
+    "response": "The Northern Wharf sector contains **4 bulk petroleum storage tanks** (each 50m diameter) and a coastal marine bunkering terminal with secondary containment berms to support cargo and naval vessel fueling. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 6,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 1,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1311.43
+  },
+  {
+    "timestamp": "2026-09-06T13:52:01.078274Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1603.87
+  },
+  {
+    "timestamp": "2026-09-06T13:52:01.110288Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this scene in detail: identify terrain features, infrastructure, and water extent. (Mission: mumbai-port)",
+    "response": "Identified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\nSpectral analysis delineates **285.14 km\u00b2 (28514.0 hectares)** of water inundation `[Spectral Remote-Sensing Segmenter (NDWI/NDVI) | 96.8% confidence]`.\n\n- **Index Formulations**: Computed normalized multi-band band reflectance ratios for calibrated boundary extraction.\n- **Contour Vectorization**: Delineated contiguous polygon boundaries with morphological edge smoothing.\n- **Areal Extent**: Calibrated against geospatial raster coordinate reference grid.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 285.14,
+      "area_hectares": 28514.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 2
+      }
+    },
+    "latency_ms": 1794.92
+  },
+  {
+    "timestamp": "2026-09-06T13:52:02.708682Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: Assess structural damage, physical breaches, or hazard anomalies across this AOI. (History: 0 turns)",
+    "response": "Structural integrity audit indicates **nominal operational status** across primary quays, piers, and berthing structures. No structural breach, subsidence, or catastrophic hazard anomalies are detected in the current pass.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 1553.24
+  },
+  {
+    "timestamp": "2026-09-06T13:52:02.807997Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Assess structural damage, physical breaches, or hazard anomalies across this AOI. (Mission: mumbai-port)",
+    "response": "Structural integrity audit indicates **nominal operational status** across primary quays, piers, and berthing structures. No structural breach, subsidence, or catastrophic hazard anomalies are detected in the current pass. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 16,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1652.55
+  },
+  {
+    "timestamp": "2026-09-06T14:02:01.690707Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1187.25
+  },
+  {
+    "timestamp": "2026-09-06T14:02:01.706625Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, prominent structures, and land use. (Mission: mumbai-port)",
+    "response": "Identified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1287.01
+  },
+  {
+    "timestamp": "2026-09-06T14:12:33.440317Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1583.81
+  },
+  {
+    "timestamp": "2026-09-06T14:12:33.459191Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, prominent structures, and land use. (Mission: mumbai-port)",
+    "response": "Identified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1682.87
+  },
+  {
+    "timestamp": "2026-09-06T14:12:33.566071Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all vessels in this AOI and identify naval craft (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 68.4
+  },
+  {
+    "timestamp": "2026-09-06T14:12:33.690751Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Detect all fuel storage tanks and verify containment perimeter security. (Mission: mumbai-port)",
+    "response": "Identified and located **6 fuel storage tanks & coastal infrastructure assets** across the active AOI `[Object Detection Engine (YOLOv8) | 95.3% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 1, **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 6,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 1,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 97.66
+  },
+  {
+    "timestamp": "2026-09-06T14:13:10.356645Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Analyze deforestation and burn scar extent in km\u00b2 (Mission: western-ghats)",
+    "response": "Spectral analysis delineates **28.4 km\u00b2 (2840.0 hectares)** of canopy loss and burn scar `[Spectral Remote-Sensing Segmenter (NDWI/NDVI) | 96.8% confidence]`.\n\n- **Index Formulations**: Computed normalized multi-band band reflectance ratios for calibrated boundary extraction.\n- **Contour Vectorization**: Delineated contiguous polygon boundaries with morphological edge smoothing.\n- **Areal Extent**: Calibrated against geospatial raster coordinate reference grid.\n\nBi-temporal co-registration indicates a **-18.6% change** (canopy loss and burn scar) relative to the baseline pass `[Bi-Temporal Differencing Engine (SSIM/CVA) | 97.5% confidence]`.\n\n- **Variance Extent**: Identified localized structural anomalies across **28.4 km\u00b2** of the scene footprint.\n- **Alignment Accuracy**: Sub-pixel geometric tie-point alignment verified against WGS84 raster metadata.\n- **Inspection Mode**: Swipe / Split Compare layer activated on tactical map for direct visual comparison.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 4,
+      "area_km2": 28.4,
+      "area_hectares": 2840.0,
+      "change_percentage": -18.6,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 4,
+        "water_polygons": 2
+      }
+    },
+    "latency_ms": 106.79
+  },
+  {
+    "timestamp": "2026-09-06T14:13:10.467779Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all naval vessels and cargo ships in Mumbai port (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 81.97
+  },
+  {
+    "timestamp": "2026-09-06T14:13:12.173762Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: Show flooded areas near Brahmaputra river and measure inundation extent (History: 0 turns)",
+    "response": "Active flood inundation is confirmed across 142.8 km\u00b2 of the Brahmaputra floodplain. Multi-sensor radar indicates floodwaters encroaching within 150 meters of national transit corridors.",
+    "image_metadata": {
+      "scenario": "brahmaputra-flood",
+      "cropped": false,
+      "source_file": "brahmaputra_t2_flood.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 1631.25
+  },
+  {
+    "timestamp": "2026-09-06T14:13:12.294038Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Show flooded areas near Brahmaputra river and measure inundation extent (Mission: brahmaputra-flood)",
+    "response": "Active flood inundation is confirmed across 142.8 km\u00b2 of the Brahmaputra floodplain. Multi-sensor radar indicates floodwaters encroaching within 150 meters of national transit corridors. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`\n\nSpectral analysis delineates **285.14 km\u00b2 (28514.0 hectares)** of water inundation `[Spectral Remote-Sensing Segmenter (NDWI/NDVI) | 96.8% confidence]`.\n\n- **Index Formulations**: Computed normalized multi-band band reflectance ratios for calibrated boundary extraction.\n- **Contour Vectorization**: Delineated contiguous polygon boundaries with morphological edge smoothing.\n- **Areal Extent**: Calibrated against geospatial raster coordinate reference grid.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 6,
+      "area_km2": 285.14,
+      "area_hectares": 28514.0,
+      "change_percentage": 248.5,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 6,
+        "water_polygons": 2
+      }
+    },
+    "latency_ms": 1800.0
+  },
+  {
+    "timestamp": "2026-09-06T14:13:13.875376Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**AEROSPACE FACILITY AUDIT: SDSC-SHAR SRIHARIKOTA**\n\nThe optical pass covers the Satish Dhawan Space Centre launch complex situated on a barrier island. High-integrity perimeter security and aerospace infrastructure are clearly identified.\n\n**Visible Infrastructure:**\n- First Launch Pad (FLP) umbilical tower, flame exhaust deflector trenches, and mobile service structures.\n- Cryogenic propellant storage facility comprising 12 spherical liquid hydrogen and oxygen tanks.\n- Vehicle Assembly Building (VAB) and rail-transfer corridor.\n\n**Uncertainties & Limitations:**\n- Internal launch vehicle configuration inside the mobile service structure cannot be determined via optical imagery.",
+    "image_metadata": {
+      "scenario": "sriharikota",
+      "cropped": false,
+      "source_file": "sriharikota_launch_complex.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "aerospace_launch_complex",
+        "coastal_island"
+      ],
+      "visible_infrastructure": [
+        "First Launch Pad (FLP)",
+        "Mobile Service Structure",
+        "Cryogenic storage spheres",
+        "Vehicle Assembly Building"
+      ],
+      "notable_features": [
+        "Nominal perimeter integrity",
+        "Active LOX/LH2 propellant depots"
+      ],
+      "uncertainties": [
+        "Internal launch vehicle payload status cannot be optically determined"
+      ]
+    },
+    "latency_ms": 1554.25
+  },
+  {
+    "timestamp": "2026-09-06T14:13:13.984707Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe visible launch pads and umbilical towers in Sriharikota (Mission: sriharikota)",
+    "response": "**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 94.0% confidence]`:\n\n**AEROSPACE FACILITY AUDIT: SDSC-SHAR SRIHARIKOTA**\n\nThe optical pass covers the Satish Dhawan Space Centre launch complex situated on a barrier island. High-integrity perimeter security and aerospace infrastructure are clearly identified.\n\n**Visible Infrastructure:**\n- First Launch Pad (FLP) umbilical tower, flame exhaust deflector trenches, and mobile service structures.\n- Cryogenic propellant storage facility comprising 12 spherical liquid hydrogen and oxygen tanks.\n- Vehicle Assembly Building (VAB) and rail-transfer corridor.\n\n**Uncertainties & Limitations:**\n- Internal launch vehicle configuration inside the mobile service structure cannot be determined via optical imagery.\n\n\u26a0\ufe0f *Sensor Note: Internal launch vehicle payload status cannot be optically determined*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 6,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 6,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1664.1
+  },
+  {
+    "timestamp": "2026-09-06T14:13:14.871732Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: What changed in Chennai suburban wetland since 2020? (History: 0 turns)",
+    "response": "Bi-temporal differencing reveals a **+24.6% structural variance** across 32.4 km\u00b2 of the scene: new infrastructure construction is concentrated in the northern logistics corridor, while surface drainage patterns exhibit seasonal alteration.",
+    "image_metadata": {
+      "scenario": "chennai-urban",
+      "cropped": false,
+      "source_file": "chennai_urban_t2_2026.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 793.33
+  },
+  {
+    "timestamp": "2026-09-06T14:13:14.984799Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: What changed in Chennai suburban wetland since 2020? (Mission: chennai-urban)",
+    "response": "Bi-temporal differencing reveals a **+24.6% structural variance** across 32.4 km\u00b2 of the scene: new infrastructure construction is concentrated in the northern logistics corridor, while surface drainage patterns exhibit seasonal alteration. `[Vision-Language Grounded Synthesis (Grounded-RemoteSensing-VLM) | 95.0% confidence]`\n\nSpectral analysis delineates **285.14 km\u00b2 (28514.0 hectares)** of water inundation `[Spectral Remote-Sensing Segmenter (NDWI/NDVI) | 96.8% confidence]`.\n\n- **Index Formulations**: Computed normalized multi-band band reflectance ratios for calibrated boundary extraction.\n- **Contour Vectorization**: Delineated contiguous polygon boundaries with morphological edge smoothing.\n- **Areal Extent**: Calibrated against geospatial raster coordinate reference grid.\n\nBi-temporal co-registration indicates a **+38.2% change** (urban growth and wetland loss) relative to the baseline pass `[Bi-Temporal Differencing Engine (SSIM/CVA) | 97.5% confidence]`.\n\n- **Variance Extent**: Identified localized structural anomalies across **285.14 km\u00b2** of the scene footprint.\n- **Alignment Accuracy**: Sub-pixel geometric tie-point alignment verified against WGS84 raster metadata.\n- **Inspection Mode**: Swipe / Split Compare layer activated on tactical map for direct visual comparison.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 285.14,
+      "area_hectares": 28514.0,
+      "change_percentage": 38.2,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 2
+      }
+    },
+    "latency_ms": 972.93
+  },
+  {
+    "timestamp": "2026-09-06T14:13:17.889557Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all discrete objects and structures in this uploaded imagery (Mission: custom_session_941902bd)",
+    "response": "Identified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 2712.43
+  },
+  {
+    "timestamp": "2026-09-06T14:13:35.619947Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Count all cargo and naval ships in this harbor area (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 222.87
+  },
+  {
+    "timestamp": "2026-09-06T14:13:37.752285Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 2035.05
+  },
+  {
+    "timestamp": "2026-09-06T14:13:37.796431Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, prominent structures, and land use. (Mission: mumbai-port)",
+    "response": "Identified and located **5 structures & buildings** across the active AOI `[Object Detection Engine (YOLOv8) | 95.2% avg confidence]`.\n\n- **Target Breakdown**: **Building**: 3, **Tank**: 2.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 5,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 0,
+        "aircraft": 0,
+        "structures": 5,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 2157.33
+  },
+  {
+    "timestamp": "2026-09-06T14:13:38.623284Z",
+    "endpoint": "/vlm/ask",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "Question: Highlight the water body & flood zone across this scene (History: 0 turns)",
+    "response": "Active flood inundation is confirmed across 142.8 km\u00b2 of the Brahmaputra floodplain. Multi-sensor radar indicates floodwaters encroaching within 150 meters of national transit corridors.",
+    "image_metadata": {
+      "scenario": "brahmaputra-flood",
+      "cropped": false,
+      "source_file": "brahmaputra_t2_flood.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {},
+    "latency_ms": 773.53
+  },
+  {
+    "timestamp": "2026-09-06T14:42:04.883322Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1944.88
+  },
+  {
+    "timestamp": "2026-09-06T14:42:04.934215Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 2358.65
+  },
+  {
+    "timestamp": "2026-09-06T14:42:50.647279Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1219.58
+  },
+  {
+    "timestamp": "2026-09-06T14:42:50.704386Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1466.62
+  },
+  {
+    "timestamp": "2026-09-06T14:45:19.240672Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1604.96
+  },
+  {
+    "timestamp": "2026-09-06T14:45:19.315714Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1848.55
+  },
+  {
+    "timestamp": "2026-09-06T14:45:20.357937Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1642.26
+  },
+  {
+    "timestamp": "2026-09-06T14:45:20.393164Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1837.5
+  },
+  {
+    "timestamp": "2026-09-06T14:45:28.493669Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1642.12
+  },
+  {
+    "timestamp": "2026-09-06T14:45:28.522526Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1795.93
+  },
+  {
+    "timestamp": "2026-09-06T15:05:23.268669Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 953.22
+  },
+  {
+    "timestamp": "2026-09-06T15:05:23.303041Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1314.97
+  },
+  {
+    "timestamp": "2026-09-06T15:14:28.613054Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1455.66
+  },
+  {
+    "timestamp": "2026-09-06T15:14:28.662516Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1694.96
+  },
+  {
+    "timestamp": "2026-09-06T15:14:34.537632Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1271.65
+  },
+  {
+    "timestamp": "2026-09-06T15:14:34.575608Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1508.98
+  },
+  {
+    "timestamp": "2026-09-06T15:19:47.054568Z",
+    "endpoint": "/vlm/describe",
+    "model": "Grounded-RemoteSensing-VLM",
+    "prompt": "You are an expert satellite remote-sensing intelligence analyst for ISRO. Examine the provided satellite/aerial imagery and produce a structured assessment covering:\n1. Land Use / Terrain Classification (e.g. maritime harbor, industrial logistics, dense forest, floodplain).\n2. Visible Infrastructure (e.g. docks, gantry cranes, roads, buildings, storage tanks, towers, runways).\n3. Notable Features / Activity (e.g. docked vessel classifications, flood inundation extent, active clearance).\n4. Uncertainties & Limitations: CRITICAL: Explicitly state any features that are uncertain or obscured due to sensor resolution, shadows, or atmospheric conditions. Do NOT guess or hallucinate.\n\nFormat your response as crisp, professional intelligence paragraphs followed by bulleted takeaways.",
+    "response": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.",
+    "image_metadata": {
+      "scenario": "mumbai-port",
+      "cropped": false,
+      "source_file": "mumbai_port_rgb.png",
+      "original_dimensions": [
+        800,
+        600
+      ]
+    },
+    "structured_data": {
+      "land_use": [
+        "deepwater_maritime_port",
+        "naval_dockyard",
+        "urban_commercial"
+      ],
+      "visible_infrastructure": [
+        "gantry_cranes",
+        "concrete_wharves",
+        "piers",
+        "dry_docks",
+        "rail_depot"
+      ],
+      "notable_features": [
+        "6 large container carriers berthed",
+        "naval frigate escort vessels",
+        "navigation channel tugs"
+      ],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ]
+    },
+    "latency_ms": 1533.6
+  },
+  {
+    "timestamp": "2026-09-06T15:19:47.113534Z",
+    "endpoint": "/ask",
+    "model": "SatQuery-AgenticOrchestrator-v2.4",
+    "prompt": "Orchestrator query: Describe this image in detail: identify geography, terrain features, and naval berths (Mission: mumbai-port)",
+    "response": "Identified and located **11 maritime vessels & naval craft** across the active AOI `[Object Detection Engine (YOLOv8) | 95.7% avg confidence]`.\n\n- **Target Breakdown**: **Ship**: 11.\n- **Spatial Mapping**: Bounding box geometry and geo-referenced coordinates mapped to active tactical display.\n- **Morphological Filter**: Targets validated against sub-meter pixel aspect ratio and reflectance signatures.\n\n**INTELLIGENCE SCENE ASSESSMENT** `[Vision-Language Grounding Engine (Grounded-RemoteSensing-VLM) | 96.0% confidence]`:\n\n**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene depicts a high-density deep-water maritime port and naval dockyard complex along the western coast. Land use comprises active commercial shipping quays, dedicated container terminals, and naval defense installations.\n\n**Visible Infrastructure:**\n- 4 primary concrete berthing wharves equipped with heavy rail-mounted gantry cranes.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Vessel cargo loading status cannot be verified due to sun-glint along the southern wharf.\n- Resolution limit (0.28m) prevents exact identification of small auxiliary craft docked in the inner harbor basin.\n\n\u26a0\ufe0f *Sensor Note: Sun-glint along southern wharf obscures cargo loading details*",
+    "image_metadata": {},
+    "structured_data": {
+      "total_targets": 11,
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "change_percentage": 12.4,
+      "breakdown": {
+        "ships": 11,
+        "aircraft": 0,
+        "structures": 0,
+        "water_polygons": 0
+      }
+    },
+    "latency_ms": 1929.3
+  }
+]

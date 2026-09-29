@@ -1,0 +1,206 @@
+{
+  "scenario_id": "mumbai-port",
+  "name": "Mumbai Port & Naval Dockyard Surveillance",
+  "sensor": "Sentinel-2 MSI / Cartosat-3 Optical",
+  "pass_date": "2026-08-28T05:42:15Z",
+  "gsd_resolution": "0.28m",
+  "bounds": {
+    "north": 18.9650,
+    "south": 18.9200,
+    "east": 72.8600,
+    "west": 72.8100
+  },
+  "cloud_cover_pct": 1.2,
+  "fixtures": {
+    "detect": {
+      "status": "SUCCESS",
+      "count": 12,
+      "model_version": "YOLOv8-RemoteSensing-StageReliable",
+      "bboxes": [
+        {
+          "class": "ship",
+          "label": "Container Carrier (280m)",
+          "confidence": 0.982,
+          "bbox_pixel": [380, 82, 140, 21],
+          "bbox_geo": [18.9480, 72.8420, 0.0015, 0.0025],
+          "lat": 18.9480,
+          "lon": 72.8420,
+          "type": "ship",
+          "box_width": 140,
+          "box_height": 21
+        },
+        {
+          "class": "ship",
+          "label": "Bulk Cargo Carrier (210m)",
+          "confidence": 0.974,
+          "bbox_pixel": [380, 152, 120, 20],
+          "bbox_geo": [18.9430, 72.8460, 0.0014, 0.0022],
+          "lat": 18.9430,
+          "lon": 72.8460,
+          "type": "ship",
+          "box_width": 120,
+          "box_height": 20
+        },
+        {
+          "class": "ship",
+          "label": "Naval Frigate F-45 (125m)",
+          "confidence": 0.991,
+          "bbox_pixel": [580, 320, 130, 40],
+          "bbox_geo": [18.9390, 72.8410, 0.0018, 0.0028],
+          "lat": 18.9390,
+          "lon": 72.8410,
+          "type": "ship",
+          "box_width": 130,
+          "box_height": 40
+        },
+        {
+          "class": "ship",
+          "label": "General Cargo Carrier (160m)",
+          "confidence": 0.955,
+          "bbox_pixel": [380, 222, 110, 18],
+          "bbox_geo": [18.9510, 72.8380, 0.0012, 0.0020],
+          "lat": 18.9510,
+          "lon": 72.8380,
+          "type": "ship",
+          "box_width": 110,
+          "box_height": 18
+        },
+        {
+          "class": "ship",
+          "label": "Crude Oil Tanker (240m)",
+          "confidence": 0.968,
+          "bbox_pixel": [550, 120, 130, 35],
+          "bbox_geo": [18.9350, 72.8470, 0.0016, 0.0026],
+          "lat": 18.9350,
+          "lon": 72.8470,
+          "type": "ship",
+          "box_width": 130,
+          "box_height": 35
+        },
+        {
+          "class": "building",
+          "label": "Port Gantry Crane Terminal",
+          "confidence": 0.942,
+          "bbox_pixel": [280, 80, 90, 25],
+          "bbox_geo": [18.9450, 72.8320, 0.0010, 0.0018],
+          "lat": 18.9450,
+          "lon": 72.8320,
+          "type": "building",
+          "box_width": 90,
+          "box_height": 25
+        },
+        {
+          "class": "ship",
+          "label": "Container Feeder (195m)",
+          "confidence": 0.961,
+          "bbox_pixel": [380, 292, 115, 19],
+          "bbox_geo": [18.9530, 72.8440, 0.0013, 0.0021],
+          "lat": 18.9530,
+          "lon": 72.8440,
+          "type": "ship",
+          "box_width": 115,
+          "box_height": 19
+        },
+        {
+          "class": "ship",
+          "label": "Naval Fast Patrol Craft",
+          "confidence": 0.978,
+          "bbox_pixel": [620, 460, 120, 30],
+          "bbox_geo": [18.9380, 72.8350, 0.0015, 0.0024],
+          "lat": 18.9380,
+          "lon": 72.8350,
+          "type": "ship",
+          "box_width": 120,
+          "box_height": 30
+        },
+        {
+          "class": "ship",
+          "label": "Harbor Tug Alpha (32m)",
+          "confidence": 0.932,
+          "bbox_pixel": [380, 362, 50, 18],
+          "bbox_geo": [18.9470, 72.8490, 0.0008, 0.0012],
+          "lat": 18.9470,
+          "lon": 72.8490,
+          "type": "ship",
+          "box_width": 50,
+          "box_height": 18
+        },
+        {
+          "class": "ship",
+          "label": "Harbor Tug Bravo (32m)",
+          "confidence": 0.925,
+          "bbox_pixel": [380, 432, 50, 18],
+          "bbox_geo": [18.9410, 72.8520, 0.0008, 0.0012],
+          "lat": 18.9410,
+          "lon": 72.8520,
+          "type": "ship",
+          "box_width": 50,
+          "box_height": 18
+        },
+        {
+          "class": "building",
+          "label": "Submarine Drydock Basin",
+          "confidence": 0.994,
+          "bbox_pixel": [280, 500, 90, 25],
+          "bbox_geo": [18.9320, 72.8390, 0.0012, 0.0020],
+          "lat": 18.9320,
+          "lon": 72.8390,
+          "type": "building",
+          "box_width": 90,
+          "box_height": 25
+        },
+        {
+          "class": "ship",
+          "label": "Coastal Freight Barge (90m)",
+          "confidence": 0.918,
+          "bbox_pixel": [380, 502, 70, 18],
+          "bbox_geo": [18.9560, 72.8400, 0.0009, 0.0015],
+          "lat": 18.9560,
+          "lon": 72.8400,
+          "type": "ship",
+          "box_width": 70,
+          "box_height": 18
+        }
+      ]
+    },
+    "segment": {
+      "status": "SUCCESS",
+      "feature_type": "water",
+      "index_type": "NDWI",
+      "area_km2": 42.5,
+      "area_hectares": 4250.0,
+      "polygon_count": 1,
+      "geojson": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "properties": { "name": "Mumbai Harbor Navigation Channel", "color": "#00D9FF", "fillColor": "#00D9FF", "fillOpacity": 0.35 },
+            "geometry": { "type": "Polygon", "coordinates": [[[72.82, 18.96], [72.86, 18.96], [72.85, 18.92], [72.81, 18.92], [72.82, 18.96]]] }
+          }
+        ]
+      }
+    },
+    "change_detect": {
+      "status": "SUCCESS",
+      "change_percentage": 12.4,
+      "change_type_guess": "berth_occupancy_shift",
+      "area_km2": 42.5,
+      "aligned": true,
+      "change_polygons": []
+    },
+    "vlm_describe": {
+      "status": "SUCCESS",
+      "description": "**LAND USE & INFRASTRUCTURE ASSESSMENT: MUMBAI HARBOR**\n\nThe scene captures a high-density deepwater maritime port and naval defense basin along the western seaboard. Land use comprises active container terminals, bulk handling wharves, and secure naval facilities.\n\n**Visible Infrastructure:**\n- 4 rail-mounted heavy container gantry crane wharves.\n- 6 large container cargo carriers berthed along the Eastern Channel.\n- Naval frigate escort vessels docked in sector Bravo with adjacent dry-dock facilities.\n\n**Uncertainties & Limitations:**\n- Sun-glint along the southern wharf limits fine deck cargo verification.\n- 0.28m resolution threshold limits sub-classification of inner-basin auxiliary harbor craft.",
+      "land_use": ["deepwater_maritime_port", "naval_dockyard", "urban_commercial"],
+      "visible_infrastructure": ["gantry_cranes", "concrete_wharves", "piers", "dry_docks", "rail_depot"],
+      "notable_features": ["6 large container carriers berthed", "naval frigate escort vessels", "navigation channel tugs"],
+      "uncertainties": [
+        "Sun-glint along southern wharf obscures cargo loading details",
+        "Auxiliary harbor craft sub-classification limited by 0.28m resolution"
+      ],
+      "confidence_score": 0.982,
+      "model": "gemini-2.5-flash"
+    }
+  }
+}

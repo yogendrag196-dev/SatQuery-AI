@@ -1,0 +1,197 @@
+/**
+ * audit.css
+ * Access & Audit Logging Ledger Drawer Styles
+ */
+
+.audit-drawer {
+  position: fixed;
+  top: 0;
+  right: -580px;
+  width: 560px;
+  height: 100vh;
+  background: rgba(8, 12, 20, 0.96);
+  border-left: 1px solid var(--cyan-signal);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8), -2px 0 15px rgba(0, 217, 255, 0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(20px);
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.audit-drawer.open {
+  right: 0;
+}
+
+.audit-header {
+  padding: 16px 20px;
+  background: rgba(0, 217, 255, 0.06);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audit-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.audit-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+}
+
+.audit-count-badge {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  background: rgba(0, 217, 255, 0.15);
+  border: 1px solid var(--cyan-signal);
+  color: var(--cyan-signal);
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+
+.audit-toolbar {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.audit-search-input {
+  flex: 1;
+  background: #05080E;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #FFFFFF;
+  border-radius: 2px;
+  outline: none;
+}
+
+.audit-search-input:focus {
+  border-color: var(--cyan-signal);
+}
+
+.audit-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.audit-entry-card {
+  background: rgba(12, 18, 30, 0.85);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  border-radius: 3px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.audit-entry-card:hover {
+  background: rgba(0, 217, 255, 0.08);
+  border-color: var(--cyan-signal);
+}
+
+.audit-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audit-action-tag {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 0.8px;
+}
+
+.audit-action-tag.login { background: rgba(61, 220, 151, 0.15); border: 1px solid var(--green-nominal); color: var(--green-nominal); }
+.audit-action-tag.query { background: rgba(0, 217, 255, 0.15); border: 1px solid var(--cyan-signal); color: var(--cyan-signal); }
+.audit-action-tag.override { background: rgba(255, 184, 0, 0.15); border: 1px solid var(--amber-alert); color: var(--amber-alert); }
+.audit-action-tag.export { background: rgba(180, 100, 255, 0.15); border: 1px solid #B464FF; color: #B464FF; }
+
+.audit-timestamp {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.audit-details-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.audit-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--text-muted);
+  border-top: 1px dashed rgba(0, 217, 255, 0.1);
+  padding-top: 6px;
+}
+
+.audit-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.audit-checksum {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--cyan-signal);
+  background: rgba(0, 217, 255, 0.08);
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.audit-footer {
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(0, 217, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audit-export-btn {
+  background: rgba(0, 217, 255, 0.12);
+  border: 1px solid var(--cyan-signal);
+  color: #FFFFFF;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.audit-export-btn:hover {
+  background: var(--cyan-signal);
+  color: #000000;
+}

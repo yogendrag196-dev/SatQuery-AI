@@ -1,10 +1,10 @@
 {
   "name": "satquery-ai",
   "version": "1.0.0",
-  "description": "Vision-Language Satellite Intelligence Mission Control",
   "private": true,
   "scripts": {
-    "dev": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build"
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
   }
 }

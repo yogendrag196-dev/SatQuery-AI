@@ -1,0 +1,121 @@
+{
+  "mumbai-port": {
+    "id": "mumbai-port",
+    "name": "Mumbai Port & Naval Dockyard Surveillance",
+    "region": "Mumbai Harbor, Maharashtra, India",
+    "sensor": "CARTOSAT-3 / RISAT-2BR1 SAR",
+    "gsd": "0.28m",
+    "center": [18.9438, 72.8354],
+    "zoom": 14,
+    "t1_date": "2026-03-01",
+    "t2_date": "2026-09-02",
+    "bounds": {
+      "north": 18.9650,
+      "south": 18.9200,
+      "east": 72.8600,
+      "west": 72.8100
+    },
+    "suggested_prompts": [
+      "Describe this image in detail: identify geography, terrain features, and naval berths",
+      "Highlight naval craft and vessels in sector Bravo",
+      "Count all cargo and naval ships in this harbor area",
+      "Detect any fuel storage tanks and coastal support infrastructure"
+    ],
+    "scenario_type": "object_detection"
+  },
+  "brahmaputra-flood": {
+    "id": "brahmaputra-flood",
+    "name": "Brahmaputra River Monsoon Flood Inundation",
+    "region": "Kaziranga Basin, Assam, India",
+    "sensor": "SENTINEL-2 MSI (13-Band) / RISAT-2B SAR",
+    "gsd": "10.0m",
+    "center": [26.6500, 93.3500],
+    "zoom": 12,
+    "t1_date": "2026-05-10",
+    "t2_date": "2026-08-20",
+    "bounds": {
+      "north": 26.7500,
+      "south": 26.5500,
+      "east": 93.5000,
+      "west": 93.2000
+    },
+    "suggested_prompts": [
+      "Describe this image: flood inundation along the river basin",
+      "Highlight the water body & flood zone across this scene",
+      "What changed between these two dates, and where?",
+      "Calculate total inundated surface area in square kilometers"
+    ],
+    "scenario_type": "flood_segmentation"
+  },
+  "western-ghats": {
+    "id": "western-ghats",
+    "name": "Western Ghats Canopy Loss & Burn Scar",
+    "region": "Agasthyamalai Biosphere, Kerala/Tamil Nadu",
+    "sensor": "RESOURCESAT-2A / SENTINEL-2",
+    "gsd": "5.0m",
+    "center": [8.6500, 77.2500],
+    "zoom": 13,
+    "t1_date": "2022-04-12",
+    "t2_date": "2026-02-28",
+    "bounds": {
+      "north": 8.7500,
+      "south": 8.5500,
+      "east": 77.3500,
+      "west": 77.1500
+    },
+    "suggested_prompts": [
+      "Describe this image: forest canopy and mountain terrain",
+      "Highlight burn scars and deforestation patches",
+      "What changed between these two dates? Quantify canopy loss in km²",
+      "Analyze deforestation and burn scar extent in km²"
+    ],
+    "scenario_type": "canopy_change"
+  },
+  "sriharikota": {
+    "id": "sriharikota",
+    "name": "SDSC-SHAR Sriharikota Launch Facility",
+    "region": "Satish Dhawan Space Centre, Andhra Pradesh",
+    "sensor": "CARTOSAT-3 PAN + MX",
+    "gsd": "0.28m",
+    "center": [13.7198, 80.2300],
+    "zoom": 14,
+    "t1_date": "2026-01-15",
+    "t2_date": "2026-08-30",
+    "bounds": {
+      "north": 13.7500,
+      "south": 13.6800,
+      "east": 80.2600,
+      "west": 80.2000
+    },
+    "suggested_prompts": [
+      "Describe visible launch pads and umbilical towers in Sriharikota",
+      "Highlight launch pads and propellant storage spheres",
+      "Audit cryogenic fuel storage spheres and propellant depots"
+    ],
+    "scenario_type": "infrastructure_audit"
+  },
+  "chennai-urban": {
+    "id": "chennai-urban",
+    "name": "Chennai Suburban Urbanization & Wetland Delta",
+    "region": "Pallikaranai Marshlands, Chennai, Tamil Nadu",
+    "sensor": "CARTOSAT-2E / SENTINEL-2",
+    "gsd": "1.0m",
+    "center": [12.9350, 80.2150],
+    "zoom": 13,
+    "t1_date": "2020-01-10",
+    "t2_date": "2026-08-15",
+    "bounds": {
+      "north": 12.9700,
+      "south": 12.9000,
+      "east": 80.2500,
+      "west": 80.1800
+    },
+    "suggested_prompts": [
+      "Describe this image: urban sprawl and marshland reservoir",
+      "What changed between these two dates, and where?",
+      "Has the built-up area increased, decreased, or remained unchanged?",
+      "Track new urban construction and building density expansion since 2020"
+    ],
+    "scenario_type": "urban_growth"
+  }
+}

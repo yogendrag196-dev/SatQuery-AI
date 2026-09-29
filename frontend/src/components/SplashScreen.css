@@ -1,0 +1,493 @@
+/* =========================================================
+   SATQUERY AI — REALISTIC MISSION CONTROL SPLASH SCREEN
+   Theme: ISRO Ground Station & Low-Earth Orbit Satellite Acquisition
+========================================================= */
+
+.sq-splash {
+  position: fixed;
+  inset: 0;
+  background: #03060C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99999;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  overflow: hidden;
+  user-select: none;
+}
+
+.sq-splash--out,
+.sq-splash.sq-out {
+  opacity: 0;
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+/* Background Space & Orbital Canvas */
+.sq-splash__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Subtle CRT Scanlines & Optical Vignette */
+.sq-splash__vignette {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(3, 7, 15, 0) 30%, rgba(3, 6, 12, 0.85) 100%),
+    linear-gradient(rgba(0, 217, 255, 0.015) 50%, rgba(0, 0, 0, 0.3) 50%);
+  background-size: 100% 100%, 100% 4px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Foreground Tactical HUD Container */
+.sq-splash__hud {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+/* HUD Top Bar */
+.sq-splash__top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sq-splash__agency {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sq-splash__badge {
+  background: rgba(0, 217, 255, 0.12);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  color: #00D9FF;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.2);
+}
+
+.sq-splash__pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3DDC97;
+  box-shadow: 0 0 8px #3DDC97;
+  animation: sqPulseGreen 1.4s ease-in-out infinite;
+}
+
+.sq-splash__station-meta {
+  font-size: 10.5px;
+  color: #7E95AC;
+  letter-spacing: 1px;
+}
+
+.sq-splash__station-meta span {
+  color: #00D9FF;
+  font-weight: 600;
+}
+
+/* Interactive Skip Button */
+.sq-splash__skip,
+.sq-skip {
+  background: rgba(8, 14, 24, 0.7);
+  border: 1px solid rgba(0, 217, 255, 0.35);
+  color: #67E8F9;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 14px rgba(0, 217, 255, 0.1);
+}
+
+.sq-splash__skip:hover,
+.sq-skip:hover {
+  background: rgba(0, 217, 255, 0.15);
+  border-color: #00D9FF;
+  color: #FFFFFF;
+  box-shadow: 0 0 18px rgba(0, 217, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.sq-splash__skip kbd {
+  background: rgba(0, 217, 255, 0.2);
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 9px;
+  border: 1px solid rgba(0, 217, 255, 0.4);
+}
+
+/* Center Brand & Reticle */
+.sq-splash__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto 0;
+}
+
+/* Aerospace Targeting Reticle */
+.sq-splash__reticle {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sq-splash__ring-outer {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed rgba(0, 217, 255, 0.35);
+  border-radius: 50%;
+  animation: sqRotate 30s linear infinite;
+}
+
+.sq-splash__ring-inner {
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 50%;
+}
+
+.sq-splash__radar-sweep-beam {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 15px;
+  left: 15px;
+  border-radius: 100% 0 0 0;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.35) 0%, rgba(0, 217, 255, 0) 70%);
+  transform-origin: 90px 90px;
+  animation: sqRotate 2.4s linear infinite;
+}
+
+.sq-splash__satellite-svg {
+  position: relative;
+  z-index: 5;
+  filter: drop-shadow(0 0 14px rgba(0, 217, 255, 0.7));
+}
+
+.sq-splash__lock-indicator {
+  position: absolute;
+  bottom: 0;
+  font-size: 9.5px;
+  letter-spacing: 2px;
+  color: #3DDC97;
+  background: rgba(3, 7, 15, 0.85);
+  padding: 2px 8px;
+  border: 1px solid rgba(61, 220, 151, 0.4);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(61, 220, 151, 0.25);
+}
+
+/* Brand Typography */
+.sq-splash__wordmark,
+.sq-wordmark {
+  font-size: 40px;
+  letter-spacing: 12px;
+  font-weight: 800;
+  color: #F0F9FF;
+  margin-left: 12px; /* compensate for letter spacing */
+  text-shadow: 0 0 24px rgba(0, 217, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sq-splash__wordmark .highlight {
+  color: #00D9FF;
+  text-shadow: 0 0 28px #00D9FF;
+}
+
+.sq-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: sqLetterIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sq-splash__subtitle,
+.sq-subtitle {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #62A4B8;
+  font-weight: 500;
+  opacity: 0;
+  animation: sqFadeIn 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+/* Bottom Telemetry & Terminal Console */
+.sq-splash__bottom {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 4-Metric Real-Time Orbital Telemetry HUD Grid */
+.sq-splash__telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sq-splash__telemetry-card {
+  background: rgba(7, 13, 22, 0.7);
+  border: 1px solid rgba(0, 217, 255, 0.18);
+  border-radius: 3px;
+  padding: 8px 12px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sq-splash__telem-lbl {
+  font-size: 9px;
+  color: #61778F;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sq-splash__telem-val {
+  font-size: 13px;
+  color: #00D9FF;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Terminal Log Box */
+.sq-splash__terminal-box {
+  background: rgba(4, 9, 16, 0.85);
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  border-radius: 3px;
+  padding: 10px 14px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.sq-splash__terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.sq-splash__term-title {
+  font-size: 9.5px;
+  letter-spacing: 1.5px;
+  color: #708EA8;
+  font-weight: 600;
+}
+
+/* Live RF Spectrum Wave / Signal Bars */
+.sq-splash__rf-meter {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 12px;
+}
+
+.sq-splash__rf-bar {
+  width: 3px;
+  background: #00D9FF;
+  border-radius: 1px;
+  animation: sqRfFlicker 0.6s ease-in-out infinite alternate;
+}
+
+.sq-splash__rf-bar:nth-child(1) { height: 40%; animation-delay: 0.1s; }
+.sq-splash__rf-bar:nth-child(2) { height: 80%; animation-delay: 0.3s; }
+.sq-splash__rf-bar:nth-child(3) { height: 100%; animation-delay: 0.2s; }
+.sq-splash__rf-bar:nth-child(4) { height: 60%; animation-delay: 0.4s; }
+.sq-splash__rf-bar:nth-child(5) { height: 90%; animation-delay: 0.15s; }
+.sq-splash__rf-bar:nth-child(6) { height: 50%; animation-delay: 0.35s; }
+
+/* Real-Time Log Lines */
+.sq-splash__log-stream {
+  min-height: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.sq-splash__log-line {
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sq-splash__log-line.active {
+  color: #67E8F9;
+  font-weight: 600;
+}
+
+.sq-splash__log-line.success {
+  color: #3DDC97;
+  font-weight: 600;
+}
+
+.sq-splash__cursor {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  background: #00D9FF;
+  animation: sqCursorBlink 0.7s step-start infinite;
+  vertical-align: middle;
+}
+
+/* Precision Progress Bar */
+.sq-splash__progress-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.sq-splash__progress-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sq-splash__progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #007799 0%, #00D9FF 80%, #E0F7FA 100%);
+  box-shadow: 0 0 10px #00D9FF;
+  transition: width 0.1s linear;
+}
+
+.sq-splash__progress-val {
+  font-size: 10.5px;
+  color: #00D9FF;
+  font-weight: 700;
+  min-width: 38px;
+  text-align: right;
+}
+
+/* Constellation Synced Chips Row */
+.sq-splash__chips-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9.5px;
+  color: #64748B;
+  padding: 0 4px;
+}
+
+.sq-splash__chip-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sq-splash__chip-item.locked {
+  color: #3DDC97;
+}
+
+.sq-splash__chip-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #3DDC97;
+  box-shadow: 0 0 6px #3DDC97;
+}
+
+/* =========================================================
+   KEYFRAME ANIMATIONS
+========================================================= */
+
+@keyframes sqRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sqLetterIn {
+  from {
+    opacity: 0;
+    text-shadow: 0 0 28px #00D9FF;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 14px rgba(0, 217, 255, 0.5);
+    transform: translateY(0);
+  }
+}
+
+@keyframes sqFadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sqPulseGreen {
+  0%, 100% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); box-shadow: 0 0 10px #3DDC97; }
+}
+
+@keyframes sqCursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes sqRfFlicker {
+  0% { transform: scaleY(0.4); opacity: 0.6; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sq-splash__hud { padding: 16px; }
+  .sq-splash__wordmark { font-size: 26px; letter-spacing: 6px; }
+  .sq-splash__reticle { width: 160px; height: 160px; margin-bottom: 12px; }
+  .sq-splash__telemetry-grid { grid-template-columns: repeat(2, 1fr); }
+  .sq-splash__chips-row { display: none; }
+}

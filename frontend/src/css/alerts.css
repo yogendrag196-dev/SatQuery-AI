@@ -1,0 +1,297 @@
+/**
+ * alerts.css
+ * Styles for the collapsible Mission Alerts Feed & Notification Drawer
+ */
+
+.alert-bell-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(17, 24, 38, 0.85);
+  border: 1px solid var(--cyan-border);
+  color: var(--cyan-signal);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.alert-bell-btn:hover, .alert-bell-btn.active {
+  background: rgba(0, 217, 255, 0.15);
+  border-color: var(--cyan-signal);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.3);
+}
+
+.alert-badge {
+  background: var(--red-critical);
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 10px;
+  animation: pulse-alert 2s infinite;
+}
+
+@keyframes pulse-alert {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 92, 92, 0.7); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 92, 92, 0); }
+}
+
+/* Alert Drawer Overlay */
+.alert-drawer {
+  position: fixed;
+  top: 65px;
+  right: 20px;
+  width: 420px;
+  max-width: calc(100vw - 40px);
+  background: rgba(10, 14, 20, 0.96);
+  border: 1px solid var(--cyan-signal);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 217, 255, 0.2);
+  backdrop-filter: blur(16px);
+  border-radius: 4px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.alert-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.alert-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--cyan-border);
+  background: rgba(17, 24, 38, 0.7);
+}
+
+.alert-drawer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--cyan-signal);
+}
+
+.alert-drawer-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+.alert-drawer-close:hover {
+  color: #fff;
+}
+
+.alert-list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.alert-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  background: rgba(17, 24, 38, 0.6);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  border-left: 3px solid var(--cyan-signal);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.alert-item:hover {
+  background: rgba(0, 217, 255, 0.1);
+  border-color: var(--cyan-signal);
+  transform: translateX(3px);
+}
+
+.alert-item.critical {
+  border-left-color: var(--red-critical);
+}
+
+.alert-item.warning {
+  border-left-color: var(--amber-alert);
+}
+
+.alert-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert-type-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.alert-item.critical .alert-type-tag {
+  background: rgba(255, 92, 92, 0.2);
+  color: var(--red-critical);
+  border: 1px solid var(--red-critical);
+}
+
+.alert-item.warning .alert-type-tag {
+  background: rgba(255, 184, 0, 0.2);
+  color: var(--amber-alert);
+  border: 1px solid var(--amber-alert);
+}
+
+.alert-item.info .alert-type-tag {
+  background: rgba(0, 217, 255, 0.2);
+  color: var(--cyan-signal);
+  border: 1px solid var(--cyan-signal);
+}
+
+.alert-time {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.alert-headline {
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.alert-details {
+  font-size: 10px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.alert-action-hint {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  color: var(--cyan-signal);
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Proactive Alert Pulse Animation */
+.alert-item.proactive-pulse {
+  animation: proactive-item-flash 2.5s infinite alternate ease-in-out;
+  border-left-width: 4px !important;
+}
+
+@keyframes proactive-item-flash {
+  from { background: rgba(14, 20, 32, 0.85); }
+  to { background: rgba(0, 217, 255, 0.18); }
+}
+
+/* Proactive Floating Toast Notification Banner */
+.proactive-toast-banner {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99999;
+  width: 460px;
+  max-width: calc(100vw - 40px);
+  background: rgba(9, 14, 22, 0.96);
+  border: 1px solid var(--cyan-signal);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 30px var(--cyan-glow);
+  backdrop-filter: blur(16px);
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.96);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.proactive-toast-banner.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.toast-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.toast-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--red-critical);
+  box-shadow: 0 0 10px var(--red-critical);
+  margin-top: 3px;
+  flex-shrink: 0;
+  animation: pulse-alert 1.2s infinite;
+}
+
+.toast-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--cyan-signal);
+  letter-spacing: 0.8px;
+  margin-bottom: 2px;
+}
+
+.toast-body {
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+.toast-inspect-btn {
+  background: rgba(0, 217, 255, 0.2);
+  border: 1px solid var(--cyan-signal);
+  color: #FFFFFF;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  border-radius: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.toast-inspect-btn:hover {
+  background: var(--cyan-signal);
+  color: #03070D;
+  box-shadow: 0 0 15px var(--cyan-glow);
+}
+
