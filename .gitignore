@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment and secrets
+.env
+backend/.env
+*.local
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+
+# Uploads and temporary test outputs
+backend/uploads/*
+!backend/uploads/.gitkeep
+test_fixtures/*.tif
+
+# Build outputs
+dist/
+frontend/dist/
+build/
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
