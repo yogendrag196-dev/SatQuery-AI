@@ -286,7 +286,7 @@ class OrchestratorAgent:
             })
             explainability_trail.append({
                 "step": len(explainability_trail) + 1,
-                "action": "Modality Step 3: Cross-Modal Joint Fusion & Decision Alignment",
+                "action": "Modality Step 3: Cross-Modal Joint Fusion (cross_modal_fusion) & Decision Alignment",
                 "decision": f"Synthesized dual-modality tensor: Optical {fusion_res.get('optical_contribution_pct')}% + SAR {fusion_res.get('sar_contribution_pct')}% across {cv_metrics['area_km2']} km² ({cv_metrics['count']} targets)."
             })
 
@@ -679,9 +679,9 @@ class OrchestratorAgent:
             conf = tool_confidences.get('cross_modal_fusion', 0.985) * 100
             
             if fused_summary:
-                fusion_lead = f"{fused_summary} `[Cross-Modal Optical-SAR Fusion Engine (RISAT-2BR1 + Cartosat-3) | {conf:.1f}% confidence | Modality Breakdown: Optical {opt_pct}%, SAR {sar_pct}%]`."
+                fusion_lead = f"{fused_summary} `[Cross-Modal Optical–SAR Fusion Engine (RISAT-2BR1 + Cartosat-3) | {conf:.1f}% confidence | Modality Breakdown: Optical {opt_pct}%, SAR {sar_pct}%]`."
             else:
-                fusion_lead = f"Cross-modal optical-SAR joint synthesis extracted **{cnt} verified target assets** across **{area} km²** `[Cross-Modal Optical-SAR Fusion Engine | {conf:.1f}% confidence | Optical: {opt_pct}%, SAR: {sar_pct}%]`."
+                fusion_lead = f"Cross-modal optical-SAR joint synthesis extracted **{cnt} verified target assets** across **{area} km²** `[Cross-Modal Optical–SAR Fusion Engine | {conf:.1f}% confidence | Optical: {opt_pct}%, SAR: {sar_pct}%]`."
                 
             details = [
                 f"- **Optical Contribution ({opt_pct}%)**: High-resolution spatial boundaries, building perimeters, and surface spectral features.",
